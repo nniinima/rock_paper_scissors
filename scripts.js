@@ -11,24 +11,24 @@ function gameRound(playerSelection, computerSelection) {
     }   else if (playerHand == 'rock') {
             if (computerSelection == 'paper') {
                 return 'You lose!';
-            } else {
-                return 'You win!';
-            }
+            }   else {
+                    return 'You win!';
+                }
         }   else if (playerHand == 'scissor') {
                 if (computerSelection == 'rock') {
                     return 'You lose!';
-                } else {
-                    return 'You win!';
-                }
+                }   else {
+                        return 'You win!';
+                    }
             }   else if (playerHand == 'paper') {
                     if (computerSelection == 'scissor') {
                         return 'You lose!';
-                    } else {
-                        return 'You win!';
+                    }   else {
+                            return 'You win!';
+                        }
+                }   else {
+                        return "Invalid selection"
                     }
-                } else {
-                    return "Invalid selection"
-                }
 }
 
 function game() {
@@ -49,21 +49,21 @@ if (result == 'You lose!') {
         playerScore++;
         console.log(result);
         console.log('Computer: ', computerScore, 'Player: ', playerScore)
-    } else if (result == "It's a draw!"){
-        rounds--;
-        console.log("draw");
-    }   else {
+    }   else if (result == "It's a draw!"){
             rounds--;
-            console.log("invalid game");
-        }
+            console.log("draw");
+        }   else {
+                rounds--;
+                console.log("invalid game");
+            }
 }
 
 if (rounds == 5) {
     if (computerScore >= 3) {
         console.log("Computer wins the game! Better luck next time.");
-    } else {
-        console.log("You win the game! Congratulations!");
-            }
+    }   else {
+            console.log("You win the game! Congratulations!");
+        }
 } 
 
 }
